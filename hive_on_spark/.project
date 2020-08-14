@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>hive_on_spark</name>
+	<name>spark_on_hive</name>
 	<comment></comment>
 	<projects>
 	</projects>

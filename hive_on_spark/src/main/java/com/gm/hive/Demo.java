@@ -10,17 +10,17 @@ import org.apache.spark.sql.hive.HiveContext;
 public class Demo {
 	private static String appName = "Hive_On_Spark_Demo";
 	// private static String master = "local";
-	// private static String master = "spark://S1:7077";
+	private static String master = "spark://S1:7077";
 
 	public static void main(String[] args) {
 
 		JavaSparkContext sc = null;
 		try {
 			// 初始化 JavaSparkContext，JAR提交模式
-			SparkConf conf = new SparkConf().setAppName(appName);
+			// SparkConf conf = new SparkConf().setAppName(appName);
 
 			// 初始化 JavaSparkContext，本地测试模式需设置Master
-			// SparkConf conf = new SparkConf().setAppName(appName).setMaster(master);
+			SparkConf conf = new SparkConf().setAppName(appName).setMaster(master);
 
 			sc = new JavaSparkContext(conf);
 			sc.setLogLevel("WARN");
